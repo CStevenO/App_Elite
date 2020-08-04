@@ -6,6 +6,7 @@ import java.util.*
 
 
 class GetData {
+
     var connection: Connection? = null
     var ConnectionResult: String? = ""
     var isSuccess = false
@@ -19,14 +20,14 @@ class GetData {
                 if (connection == null) {
                     ConnectionResult = "Check Your Internet Access!"
                 } else {
-                    val query = "Select * from [ELITE].[dbo].[Covid.Empleados] where IDempleado 16523"
+                    val query = "Select * from USUARIO where NOMBRE = 'pastingenieria'"
                     val statement = connection!!.createStatement()
                     val resultSet = statement.executeQuery(query)
                     while (resultSet.next()) {
                         val dataNum: MutableMap<String?, String?> = HashMap()
-                        dataNum["IDempleado"] = resultSet.getString("IDempleado")
-                        dataNum["Descripcion"] = resultSet.getString("Descripcion")
-                        dataNum["Cedula"] = resultSet.getString("Cedula")
+                        dataNum["ID_USUARIO"] = resultSet.getString("ID_USUARIO")
+                        //dataNum["Descripcion"] = resultSet.getString("Descripcion")
+                        //dataNum["Cedula"] = resultSet.getString("Cedula")
                         data.add(dataNum)
                     }
                     ConnectionResult = "Successful!"

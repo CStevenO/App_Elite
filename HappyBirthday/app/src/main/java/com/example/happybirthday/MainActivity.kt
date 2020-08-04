@@ -18,7 +18,12 @@ class MainActivity : AppCompatActivity() {
             //val acc = "Select * from [ELITE].[dbo].[Covid.Empleados] where IDempleado $usereli"
             val myData = GetData()
             val Resulta = myData.data
-            val toast = Toast.makeText(this, myData.ConnectionResult,Toast.LENGTH_SHORT)
+            //val toast = Toast.makeText(this, myData.ConnectionResult,Toast.LENGTH_SHORT)
+            //var toast = Toast.makeText(this, Resulta.toString(),Toast.LENGTH_SHORT)
+            //toast.show()
+            val pru = verifica()
+            pru.conectacion()
+            val toast = Toast.makeText(this, pru.ho,Toast.LENGTH_SHORT)
             toast.show()
             if(("pastmtto") == usereli.text.toString() && ("@Elite202008.") == passwo.text.toString()){
                 ingresarboton.text = "Exitoso"

@@ -16,7 +16,7 @@ class ConnectionHelper {
     @SuppressLint("NewApi")
     fun connection(): Connection? {
         IP = "ELT-DB13-FCA.ELITE.LOCAL:1433"
-        DB = "ELITE"
+        DB = "SGMWIN"
         DBUsername = "mtto_invernaderos"
         DBPassword = "rosal714"
         val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
