@@ -9,11 +9,11 @@ import com.unboundid.ldap.sdk.LDAPException
 
 class verifica {
     //String address="ldap://server1.mydomain.com" ;
-    var address = "LDAP://ELITE.LOCAL/DC=ELITE"
+    var address = "ldap://ELITE.LOCAL"
     var port = 389
     var ho = ""
     //String bindDN="CN=name,CN=users,DC=mydomain,DC=com";
-    var bindDN = "pastingenieria@ELITE.LOCAL"
+    var bindDN = "CN=pastingenieria@ELITE.LOCAL,DC=ELITE,DC=LOCAL"
     var password = "@Elite202008."
     var login_flag = true
     var c: LDAPConnection? = null
